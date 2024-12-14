@@ -1,0 +1,18 @@
+<aside 
+class="w-64 px-2 h-full border-r bg-white border-r-[#F4F4F4] dark:bg-[#1C1C1C] dark:border-r-[#272727] transition-[width] duration-300"
+[ngClass]="!signal$.sidebarOpen() ? 'w-64' : 'w-0'">
+
+    <section class="w-full flex items-center justify-center h-16 border-b border-[#F4F4F4] dark:border-[#272727]">
+        <h1 class="font-semibold text-3xl text-black dark:text-white">Assist Exam</h1>
+    </section>
+
+    <section class="flex flex-col">
+        <span class="text-sm text-[#A4A4A4] dark:text-[#777777]">Perfil</span>
+        <div class="flex flex-col items-center">
+            <img class="w-1/2 border-2 rounded-full" src="avatars/Erick.png" alt="avatar">
+            <span>Miguel Angel Bissuett</span>
+            <span class="text-sm">Administrador</span>
+        </div>
+    </section>
+
+</aside>
