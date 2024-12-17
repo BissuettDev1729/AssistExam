@@ -31,5 +31,4 @@ export class HeaderComponent {
     this.signal$.changeStateConfigSidebarOpen(!this.signal$.configSidebarOpen())
     console.log('sidebar settings is open?:', this.signal$.configSidebarOpen());
   }
-
 }

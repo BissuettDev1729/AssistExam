@@ -1,4 +1,5 @@
-<section class="h-full border-l-[1px] bg-white border-l-[#F4F4F4] dark:bg-[#1C1C1C] dark:border-l-[#272727] transition-[width] duration-300" 
-[ngClass]="signal$.configSidebarOpen() ? 'w-64' : 'w-0'">
+<section 
+class="absolute right-0 w-64 h-full border-l bg-white border-l-[#F4F4F4] dark:bg-[#1C1C1C] dark:border-l-[#272727] transition-[transform] duration-300" 
+[ngClass]="signal$.configSidebarOpen() ? '' : 'translate-x-full'">
 
 </section>

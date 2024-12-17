@@ -1,0 +1,123 @@
+<section class="w-full h-full flex flex-col gap-4 p-2 overflow-y-auto">
+
+  <section class="w-full flex gap-2">
+    
+    <div class="bg-white dark:bg-[#1c1c1c] w-1/2 shadow rounded-md flex justify-between items-center px-2">
+      <div class="flex items-center p-1 border border-[#ededed] dark:border-[#2f2f2f] rounded-md max-h-8 gap-2">
+        <span>
+          <app-svg-icon customClass="fill-black dark:fill-white h-[20px] w-[20px]" name="search"></app-svg-icon>
+        </span>
+        <input class="outline-none bg-transparent" type="text" placeholder="Buscar usuario...">
+      </div>
+
+      <button class="py-1 px-4 bg-[#00ade8] rounded-md flex gap-1 items-center hover:shadow text-white">
+        <app-svg-icon customClass="fill-white dark:fill-white h-[20px] w-[20px]" name="userCirclePlus"></app-svg-icon>
+        <span>Nuevo usuario</span>
+      </button>
+    </div>
+    
+    <div class="flex items-center w-1/2 gap-2">
+      <div class="p-2 bg-white dark:bg-[#1c1c1c] w-full shadow rounded-md flex items-center gap-4">
+        <span class="p-2 bg-[#cb3cff2e] rounded-full">
+          <app-svg-icon customClass="fill-[#cb3cff] dark:fill-[#cb3cff] h-[20px] w-[20px]" name="usersFour"></app-svg-icon>
+        </span>
+        <div class="flex flex-col">
+          <span class="text-lg text-black dark:text-white">Total usuarios</span>
+          <span class="text-sm text-black dark:text-white/80">5</span>
+        </div>
+      </div>
+
+      <div class="p-2 bg-white dark:bg-[#1c1c1c] w-full shadow rounded-md flex items-center gap-4">
+        <span class="p-2 bg-[#FDB52A2e] rounded-full">
+          <app-svg-icon customClass="fill-[#FDB52A] dark:fill-[#FDB52A] h-[20px] w-[20px]" name="userPlus"></app-svg-icon>
+        </span>
+        <div class="flex flex-col">
+          <span class="text-lg text-black dark:text-white">Usuarios nuevos</span>
+          <span class="text-sm text-black dark:text-white/80">5</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  
+  <section class="w-full">
+    <div class="w-full overflow-hidden rounded-lg shadow">
+      <div class="w-full overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600 dark:bg-[#1c1c1c] dark:text-white/75">
+              <th class="px-4 py-3">Avatar:</th>
+              <th class="px-4 py-3">Nombre:</th>
+              <th class="px-4 py-3">Rol:</th>
+              <th class="px-4 py-3">Telefono:</th>
+              <th class="px-4 py-3">Institucion:</th>
+              <th class="px-4 py-3">Estado:</th>
+              <th class="px-4 py-3">Registro:</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white dark:bg-[#282828]">
+            @for (item of [].constructor(10); track item) {
+              <tr class="text-gray-700 dark:text-white/70">
+                <td class="px-4 py-3 border dark:border-[#171717]">
+                  <div class="flex items-center justify-center w-full">
+                    <div class="relative w-8 h-8 rounded-full flex justify-center">
+                      <img class="object-cover w-full h-full rounded-full" src="avatars/Erick.png" alt="" loading="lazy" />
+                      <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-4 py-3 border dark:border-[#171717]">
+                  <span class="text-ms font-medium">Miguel Angel Bissuett</span>
+                </td>
+                <td class="px-4 py-3 border dark:border-[#171717]">
+                  <span class="text-ms font-medium">Administrador</span>
+                </td>
+                <td class="px-4 py-3 text-ms font-semibold border dark:border-[#171717]">
+                  <span class="text-ms font-medium">+52 6563541200</span>
+                </td>
+                <td class="px-4 py-3 border dark:border-[#171717]">
+                  <span class="text-ms font-medium"> Universidad Tecnologica de Ciudad Juarez </span>
+                </td>
+                <td class="px-4 py-3 text-sm border dark:border-[#171717]">
+                  <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> En linea </span>
+                </td>
+                <td class="px-4 py-3 border dark:border-[#171717]">
+                  <span class="text-ms font-medium"> 6/10/2020 </span>
+                </td>
+              </tr>
+            } @empty {
+              <li>There are no items.</li>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="flex flex-col lg:flex-row justify-between bg-white dark:bg-[#1c1c1c] w-full shadow rounded-md">    
+    <div class="flex flex-col lg:flex-row items-center space-x-2 text-xs">      
+      <select name="" id="">
+        <option value="">10 items</option>
+      </select>
+      <p class="text-gray-500 mt-4 lg:mt-0">Mostrando 11 a 20 de 95 datos</p>    
+    </div>    
+
+    <nav aria-label="Pagination" class="flex justify-center items-center text-gray-600 mt-8 lg:mt-0">      
+      <a href="#" class="p-2 mr-4 rounded hover:bg-gray-100">        
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">          
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />        
+        </svg>      
+      </a>      
+      <a href="#" class="px-4 py-2 rounded hover:bg-gray-100"> 1 </a>      
+        <a href="#" class="px-4 py-2 rounded bg-gray-200 text-gray-900 font-medium hover:bg-gray-100"> 2 </a>      
+        <a href="#" class="px-4 py-2 rounded hover:bg-gray-100"> 3 </a>      
+        <a href="#" class="px-4 py-2 rounded hover:bg-gray-100"> ... </a>      
+        <a href="#" class="px-4 py-2 rounded hover:bg-gray-100"> 9 </a>      
+        <a href="#" class="p-2 ml-4 rounded hover:bg-gray-100">        
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">          
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />        
+          </svg>      
+        </a>    
+    </nav>  
+  </div>
+</section>

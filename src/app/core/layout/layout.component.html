@@ -1,11 +1,16 @@
-<section class="flex h-screen w-screen bg-white dark:bg-[#1C1C1C]">
+<section class="relative flex h-screen w-screen overflow-x-hidden bg-white dark:bg-[#1C1C1C]">
 
   <app-sidebar></app-sidebar>
 
-  <section class="w-full">
+  <section 
+  class="w-full bg-[#F8F9FF] dark:bg-[#202020] transition-[margin] duration-300"
+  [ngClass]="{
+    'ml-64':signal$.sidebarOpen(),
+    'mr-64':signal$.configSidebarOpen(),
+  }">
     <app-header></app-header>
 
-    <main>
+    <main class="w-full h-[calc(100%-64px)]">
       <router-outlet></router-outlet>
     </main> 
   </section>

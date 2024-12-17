@@ -9,6 +9,11 @@ export class SignalsService {
   public sidebarOpen = signal(false)
   public themeIsDark = signal(false)
 
+  constructor() {
+    this.changeStateTheme(localStorage.getItem('darkMode') === 'yes')
+    document.documentElement.classList.toggle('dark', localStorage.getItem('darkMode') === 'yes' || (!(localStorage.getItem('darkMode')) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+  }
+
   public changeStateSidebarOpen = (state: boolean) => {
     this.sidebarOpen.set(state)
   }
